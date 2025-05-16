@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap4.min.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- boxi icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tejashri Portfolio</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="navbar bg-dark rounded">
+            <a href="#" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#skills" style="--i:3;">Skills</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+            <a href="index.html" style="--i:4;">Portfolio</a>
+
+        </nav>
+
+        <!-- <nav class="navbar bg-dark rounded">
+            <a href="#" style="--i:1;" class="nav-link active">Home</a>
+            <a href="#about" style="--i:2;" class="nav-link">About</a>
+            <a href="#skills" style="--i:3;" class="nav-link">Skills</a>
+            <a href="#contact" style="--i:5;" class="nav-link">Contact</a>
+            
+        </nav> -->
+
+    </header>
+
+
+
+    <script>
+        //    const hamburger = document.querySelector('.hamburger');
+        //     const navbar = document.querySelector('.navbar');
+        //         const navLinks = document.querySelectorAll('.navbar a'); // Updated selector for nav links
+
+        //     hamburger.addEventListener('click', () => {
+        //         navbar.classList.toggle('active');
+        //     });
+
+        //     // Close the navbar when a navigation link is clicked
+        //     navLinks.forEach(link => {
+        //             link.addEventListener('click', () => {
+        //                 // navbar.classList.remove('active');
+        //                 if (window.innerWidth <= 767) { // Check if the screen width is smaller or equal to 767px (mobile screen)
+        //                     navbar.classList.remove('active'); // Close the navbar on mobile screens
+        //                 }
+        //             });
+        //         });
+
+
+        const hamburger = document.querySelector('.hamburger');
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the navbar when a navigation link is clicked and navigate to the href
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default link behavior
+                navbar.classList.remove('active'); // Close the navbar
+                const target = event.target.getAttribute('href'); // Get the href attribute value
+                if (target) {
+                    // Scroll to the target if it exists
+                    const targetElement = document.querySelector(target);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Navigate to the href if no target element is found (for external links)
+                        window.location.href = target;
+                    }
+                }
+            });
+        });
+
+
+
+
+    </script>
+
+    <!--       Home Page 🏠 -->
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Tejashri Dhomkar</h1>
+            <h3>And I'm a <span class="multiple-text">MCS Student</span></h3>
+            <h3>Objective:</h3>
+            <p>To work in a firm with a professional work driven environment where I can utilize and apply my knowledge,
+                skills which would enable me as a fresh graduate to grow while fulfilling organizational
+                goals.</p>
+
+            <div class="social-media">
+
+              <!--  <a href="https://www.instagram.com/teju14_____/" style="--i:7;"><i class='bx bxl-instagram'></i></a> -->
+                <a href=" https://github.com/Tejashri1411" style="--i:8;"><i class='bx bxl-github'></i></a>
+                <a href=" https://www.linkedin.com/in/tejashri-dhomkar-827260295" style="--i:9;"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="mailto:tejashridhomkar2003@gmail.com" style="--i:10;">
+                    <i class="bi bi-envelope"></i></a>
+                <!-- <a href="#" ><i class='bx bxl-facebook'></i></a> -->
+            </div>
+
+            <a href="Teju_Resume.pdf" class="btnResume">Download Resume</a>
+        </div>
+
+        <div class="home-img">
+            <img src="./img/img.png" width="400px" alt="">
+        </div>
+    </section>
+
+    <!-- Home Page end-->
+
+
+
+
+    <!-- navbar items-->
+
+    <!-- ==========================My self=========================== -->
+    <div class="container mt-2 text-center jumbotron" id="about">
+        <div class="card box-shadow bg-dark" style="margin-inline:
+                                    auto;">
+            <h2 class="text-shadow  text-light p-2">About</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-7">
+                <!-- <img src="img/quotes.jpg" style="border-radius:10px;border: solid white;" width="280px" height="300px"
+                    class="box-shadow"> -->
+                <div class="AboutSection">
+                    <p>I am a passionate and driven student who has completed an MSC(CS) degree. My goal is
+                        to combine my technical skills and creativity to make a positive impact in the field of
+                        technology.</p>
+                    <p>Throughout my academic journey, I have gained a solid foundation in computer science principles,
+                        including
+                        programming languages,software engineering, and database management.</p>
+
+                    <p><b><span style="position: sticky;;">Technical Skills:</span></b><br>
+
+                        <span>Programming Languages:</span> I have expertise in programming languages such as Java, C,C++,
+                        and JavaScript,React,Node.js,Express.js,MongoDB,PostgresSQL,MySQL. I
+                        am proficient in writing clean and efficient code to solve complex problems. <br>
+
+                        <span>Web Development:</span> I have hands-on experience in web development using HTML, CSS, and
+                        JavaScript. I have
+                        built responsive and user-friendly websites, incorporating modern frameworks like React,Angular.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-5 mt-4 text-center self-shadow" id="love" style="padding-block: 5%; font-family: serif;">
+                <h4>KEEP <br> CALM <br> <small> AND</small> <br> LOVE <br> PROGRAMMING ! 🧑‍💻<br>
+                </h4>
+                <div class="AboutSection"><br><br><br><br>
+                    <p><span>My Hobbies:</span> ,Listening Music,Cooking,Watching Anime</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==========================End My self======================== -->
+
+
+    <!-- ==========================Skills======================= -->
+    <div class="container text-center jumbotron" id="skills">
+
+        <div class="card box-shadow bg-dark" style="margin-inline:
+                                    auto;">
+            <h2 class="text-shadow text-light p-2">My Skill's</h2>
+        </div>
+
+
+        <div class="row m-4 ">
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/java-logo.jpg" style="border-radius:50%;border: solid  black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/React.jpg" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/node.jpg" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/html5-logo.jpg" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/css.png" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/JavaScript.jpg" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/PHP-logo.png" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/logo-mysql.png" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="m-4">
+                    <img src="img/bootstrap.png" style="border-radius:50%;border: solid black;" width="150px"
+                        height="150px" class="box-shadow p-2">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ==========================Skills End======================= -->
+
+
+    <!-- ==========================Project======================= -->
+    <div class="container text-center jumbotron" id="projects">
+        <div class="card box-shadow bg-dark" style="margin-inline:
+                                    auto;">
+            <h2 class="text-shadow text-light p-1">My Projects</h2>
+        </div>
+        <div class="row  m-4">
+            <div class="col-md-4 styling">
+                <h4 class="text-danger"><strong>Rock_paper_Scissors</strong></h4>
+            
+
+                <span><a href="https://github.com/Tejashri1411/Rock-paper-scissors" target="_blank"><button
+                            class="btn btn-success">View Source Code</button></a></span>
+
+            </div>
+            <div class="col-md-4 styling">
+                <h4 class="text-danger "><strong>TicTacToe(React)</strong></h4>
+
+               <!-- <span class="m-1 "><a href="https://github.com/Tejashri1411/TicTacToe-React" target="_blank"><button
+                            class="btn btn-success HandleStyle">Play
+                            Game</button></a></span>
+                -->
+                <span><a href="https://github.com/Tejashri1411/TicTacToe-React" target="_blank"><button
+                            class="btn btn-success">View Source Code</button></a></span> 
+
+            </div>
+            <div class="col-md-4 styling">
+                <h4 class="text-danger"><strong>Hotel management System</strong></h4>
+
+
+                <span><a href="https://github.com/Tejashri1411/Hotel-Management-System" target="_blank"><button
+                            class="btn btn-success">View Source Code</button></a></span>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- ==========================Project End======================= -->
+
+
+    <!-- ==========================Contact======================= -->
+    <div class="container text-center jumbotron" id="contact">
+        <div class="card box-shadow bg-dark" style="margin-inline:
+                                    auto;">
+            <h2 class="text-shadow text-light p-1">Contact on Socials!</h2>
+        </div>
+
+
+
+        <div class="social-media2">
+
+           <!-- <a href="https://www.instagram.com/teju14_____/" style="--i:7;"><i class='bx bxl-instagram'></i></a> -->
+            <a href=" https://github.com/Tejashri1411" style="--i:8;"><i class='bx bxl-github'></i></a>
+            <a href=" https://www.linkedin.com/in/tejashri-dhomkar-827260295" style="--i:9;"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="mailto:tejashridhomkar2003@gmail.com" style="--i:10;">
+                <i class="bi bi-envelope"></i></a>
+        </div>
+        <hr style="color:#000;">
+        <div><u style="color:#000;">Copyright&copy; 2025 by Tejashri Dhomkar</u></div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
